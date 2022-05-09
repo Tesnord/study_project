@@ -1,0 +1,24 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="logo" viewBox="0 0 30 32">
+<path fill="#ff662d" style="fill: var(--color1, #ff662d)" d="M29.091 0h-29.091v29.091h29.091v-29.091z"></path>
+<path fill="#0f1d2d" style="fill: var(--color2, #0f1d2d)" d="M22.546 5.818h-16v23.273h16v-23.273z"></path>
+<path fill="#ff662d" style="fill: var(--color1, #ff662d)" d="M22.546 5.818l-11.636 2.909v23.273l11.636-2.909v-23.273z"></path>
+</symbol>
+<symbol id="user" viewBox="0 0 32 32">
+<path fill="#fff" style="fill: var(--color3, #fff)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+<path fill="#fff" style="fill: var(--color3, #fff); stroke: var(--color1, #ff662d)" stroke="#ff662d" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.8824" d="M31.059 16c0 8.317-6.742 15.059-15.059 15.059s-15.059-6.742-15.059-15.059c0-8.317 6.742-15.059 15.059-15.059s15.059 6.742 15.059 15.059z"></path>
+<path fill="#ff662d" style="fill: var(--color1, #ff662d)" d="M4.523 27.148c-2.799-2.881-4.523-6.813-4.523-11.148 0-8.837 7.163-16 16-16s16 7.163 16 16c0 4.334-1.724 8.266-4.523 11.148l-0.026-0.039c-2.077-3.116-5.554-4.976-9.298-4.976h-4.307c-3.744 0-7.221 1.86-9.298 4.976l-0.026 0.039zM16 6.588c-3.832 0-6.949 3.117-6.949 6.949s3.117 6.949 6.948 6.949c3.832 0 6.949-3.117 6.949-6.949s-3.117-6.949-6.949-6.949z"></path>
+</symbol>
+<symbol id="login" viewBox="0 0 28 32">
+<path fill="#fff" style="fill: var(--color3, #fff)" d="M14.222 0c-4.653 0-8.438 3.785-8.438 8.438s3.785 8.438 8.438 8.438c4.653 0 8.438-3.785 8.438-8.438s-3.785-8.438-8.438-8.438z"></path>
+<path fill="#fff" style="fill: var(--color3, #fff)" d="M28.127 24.918c-2.522-3.784-6.744-6.043-11.29-6.043h-5.229c-4.546 0-8.768 2.259-11.29 6.043l-0.158 0.236v6.846h28.125v-6.846l-0.157-0.236z"></path>
+</symbol>
+<symbol id="star-full" viewBox="0 0 34 32">
+<path fill="#ff662d" style="fill: var(--color1, #ff662d)" d="M17.067 0l4.815 10.439 11.416 1.354-8.44 7.805 2.24 11.276-10.032-5.615-10.032 5.615 2.24-11.276-8.44-7.805 11.416-1.354 4.815-10.439z"></path>
+</symbol>
+<symbol id="star-hollow" viewBox="0 0 34 32">
+<path fill="none" stroke="#e1efff" style="stroke: var(--color4, #e1efff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.1333" d="M17.067 2.547l4.097 8.881 9.713 1.152-7.181 6.641 0.116 0.586 1.79 9.008-8.535-4.777-8.535 4.777 1.906-9.593-7.181-6.641 9.713-1.152 4.097-8.881z"></path>
+</symbol>
+</defs>
+</svg>
