@@ -50,6 +50,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/variables';
+
 .apartments-item {
   position: relative;
   width: 33.333%;
@@ -65,9 +67,9 @@ export default {
     padding: 20px;
     opacity: 0;
     transition: opacity 0.4s;
-    background: rgba(#0f1d2d, 0.7);
+    background: rgba($template-bg, 0.7);
     min-height: 200px;
-    color: #ffffff;
+    color: $accent-color;
     text-align: left;
     line-height: 1.4;
     cursor: pointer;

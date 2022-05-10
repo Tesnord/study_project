@@ -19,10 +19,13 @@ export default {
   }
 }
 </script>
+
 <style lang="scss" scoped>
+@import '../../assets/scss/variables';
+
   .apartments-owner {
   padding: 20px;
-  background: #e1efff;
+  background: $card-bg;
   font-weight: 400;
 
   &__title {

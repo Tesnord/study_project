@@ -23,7 +23,7 @@ export default {
 
     &--accent {
       padding-left: 10px;
-      color: #ffffff;
+      color: $accent-color;
     }
   }
 </style>

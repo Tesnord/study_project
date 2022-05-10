@@ -27,9 +27,9 @@
 <script>
 import ApartmentsList from '../components/apartment/ApartmentsList.vue'
 import ApartmentsItem from '../components/apartment/ApartmentsItem.vue'
-import apartments from '../components/apartment/apartments'
 import ApartmentsFilterForm from '../components/apartment/ApartmentFilterForm.vue'
 import ContainerSection from '../components/shared/ContainerSection.vue'
+import { getApartmentsList } from '../services/apartments.service'
 
 export default {
   name: 'App',
@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       text: '',
-      apartments,
+      apartments: [],
       filters: {
         city: '',
         price: 0
@@ -52,6 +52,14 @@ export default {
   computed: {
     filteredApartments() {
       return this.filterByCityName(this.filterByPrice(this.apartments))
+    }
+  },
+  async created() {
+    try {
+      const { data } = await getApartmentsList()
+      this.apartments = data
+    } catch (error) {
+      console.error(error);
     }
   },
   methods: {

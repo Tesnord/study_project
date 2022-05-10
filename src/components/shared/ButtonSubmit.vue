@@ -21,11 +21,13 @@
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/variables';
+
   .btn {
     display: inline-block;
     font-size: 18px;
-    background: #FF662D;
-    color: #ffffff;
+    background: $main-color;
+    color: $accent-color;
     cursor: pointer;
     min-width: 220px;
     border: 1px solid transparent;
@@ -33,8 +35,8 @@
     
     &--outlined {
       background: none;
-      border: 1px solid #FF662D;
-      color: #FF662D;
+      border: 1px solid $main-color;
+      color: $main-color;
     }
   }
 </style>

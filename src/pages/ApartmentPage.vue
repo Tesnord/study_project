@@ -1,9 +1,12 @@
 <template>
   <main class="apartment-page">
     <container-section>
-      <div class="apartment-page__content">
+      <div v-if="apartment" class="apartment-page__content">
         <apartments-main-info :apartment="apartment"/>
-        <apartments-owner class="apartment-page__owner" :owner="apartment.owner"/>
+        <div class="apartment-page__additional-info">
+          <apartments-owner class="apartment-page__owner" :owner="apartment.owner"/>
+          <reviews-index :reviews="reviewsList"/>
+        </div>
       </div>
     </container-section>
   </main>
@@ -11,9 +14,11 @@
 
 <script>
 import ContainerSection from '../components/shared/ContainerSection.vue'
-import apartments from '../components/apartment/apartments'
 import ApartmentsMainInfo from '../components/apartment/ApartmentsMainInfo.vue'
 import ApartmentsOwner from '../components/apartment/ApartmentsOwner.vue'
+import ReviewsIndex from '../components/reviews/ReviewsIndex.vue'
+import ReviewsList from '../components/reviews/reviews.json'
+import { getApartmentsById } from '../services/apartments.service'
 
 export default {
   name: 'ApartmentPage',
@@ -21,14 +26,28 @@ export default {
     ContainerSection,
     ApartmentsMainInfo,
     ApartmentsOwner,
+    ReviewsIndex,
+  },
+  data() {
+    return {
+      apartment: null
+    }
   },
   computed: {
-    apartment() {
-      return apartments.find(
-        (apartment) => apartment.id === this.$route.params.id
-      )
+    reviewsList() {
+      return ReviewsList
+    },
+  },
+  async created() {
+    try {
+      const { id } = this.$route.params
+      const { data } = await getApartmentsById(id)
+
+      this.apartment = data;
+    } catch(error) {
+      console.error(error);
     }
-  }
+  },
 }
 </script>
 
