@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="content">
-      <header-template/>
+      <header-template />
       <router-view></router-view>
     </div>
     <footer-template />
@@ -9,15 +9,15 @@
 </template>
 
 <script>
-import FooterTemplate from './components/FooterTemplate.vue'
-import HeaderTemplate from './components/HeaderTemplate.vue'
+import FooterTemplate from "./components/FooterTemplate.vue";
+import HeaderTemplate from "./components/HeaderTemplate.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     FooterTemplate,
     HeaderTemplate,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -32,6 +32,5 @@ export default {
 
 .content {
   flex-grow: 1;
-  padding-top: 120px;
 }
 </style>

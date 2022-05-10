@@ -2,6 +2,7 @@ import VueRouter from 'vue-router'
 import HomePage from './pages/HomePage'
 import ApartmentPage from './pages/ApartmentPage'
 import LoginPage from './pages/LoginPage'
+import RegistrationPage from './pages/RegistrationPage'
 import ErrorPage from './pages/ErrorPage'
 
 const routes = [
@@ -19,6 +20,11 @@ const routes = [
     path: '/login',
     component: LoginPage,
     name: 'login-page'
+  },
+  {
+    path: '/registration',
+    component: RegistrationPage,
+    name: 'registration-page'
   },
   {
     path: '*',

@@ -1,26 +1,28 @@
 <template>
   <main class="homepage">
-    <container-section>
-      <apartments-filter-form
-        class="apartments-filter"
-        @submit="filter"
-      />
-    </container-section>
-    <container-section>
-      <p v-if="!filteredApartments.length">Ничего не найдено</p>
-      <apartments-list v-else :items="filteredApartments">
-        <template v-slot:apartment="{ apartment }">
-          <apartments-item
-              :key="apartment.id"
-              :id="apartment.id"
-              :descr="apartment.descr"
-              :rating="apartment.rating"
-              :imgSrc="apartment.imgUrl"
-              :price="apartment.price"
-            />
-        </template>
-      </apartments-list>
-    </container-section>
+    <SectionWithHeaderSpacer>
+      <container-section>
+        <apartments-filter-form
+          class="apartments-filter"
+          @submit="filter"
+        />
+      </container-section>
+      <container-section>
+        <p v-if="!filteredApartments.length">Ничего не найдено</p>
+        <apartments-list v-else :items="filteredApartments">
+          <template v-slot:apartment="{ apartment }">
+            <apartments-item
+                :key="apartment.id"
+                :id="apartment.id"
+                :descr="apartment.descr"
+                :rating="apartment.rating"
+                :imgSrc="apartment.imgUrl"
+                :price="apartment.price"
+              />
+          </template>
+        </apartments-list>
+      </container-section>
+    </SectionWithHeaderSpacer>
   </main>
 </template>
 
@@ -30,6 +32,8 @@ import ApartmentsItem from '../components/apartment/ApartmentsItem.vue'
 import ApartmentsFilterForm from '../components/apartment/ApartmentFilterForm.vue'
 import ContainerSection from '../components/shared/ContainerSection.vue'
 import { getApartmentsList } from '../services/apartments.service'
+import SectionWithHeaderSpacer from "../components/shared/SectionWithHeaderSpacer.vue";
+
 
 export default {
   name: 'App',
@@ -38,6 +42,7 @@ export default {
     ApartmentsItem,
     ApartmentsFilterForm,
     ContainerSection,
+    SectionWithHeaderSpacer
   },
   data() {
     return {

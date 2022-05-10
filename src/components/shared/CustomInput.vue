@@ -3,6 +3,7 @@
     <input
       v-on="listeners"
       v-bind="$attrs"
+      @blur="blurHandler"
       class="custom-input"
       :class="!isValid && 'custom-input--error'"
     />
@@ -17,9 +18,14 @@ export default {
     return {
       isValid: true,
       error: "",
+      isFirstInput: true,
     };
   },
-  inject: ["form"],
+  inject: {
+    form: {
+      default: null,
+    },
+  },
   inheritAttrs: false,
   props: {
     value: {
@@ -45,6 +51,7 @@ export default {
   },
   watch: {
     value() {
+      if (this.isFirstInput) return;
       this.validate();
     },
   },
@@ -72,8 +79,17 @@ export default {
 
       return this.isValid;
     },
+    blurHandler() {
+      if (this.isFirstInput) {
+        this.validate();
+      }
+
+      this.isFirstInput = false;
+    },
     reset() {
-      this.$emit('input', '');
+      this.isFirstInput = true;
+      this.isValid = true;
+      this.$emit("input", "");
     },
   },
 };
@@ -89,7 +105,6 @@ export default {
 
 .custom-input {
   height: 40px;
-  max-width: 220px;
   width: 100%;
   border: 2px solid $main-color;
   font-size: 18px;
