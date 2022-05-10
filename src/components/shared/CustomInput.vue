@@ -4,6 +4,7 @@
       v-on="listeners"
       v-bind="$attrs"
       @blur="blurHandler"
+      :value="value"
       class="custom-input"
       :class="!isValid && 'custom-input--error'"
     />
