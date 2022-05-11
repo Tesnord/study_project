@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <notifications-index />
     <div class="content">
       <header-template />
       <router-view></router-view>
@@ -11,11 +12,14 @@
 <script>
 import FooterTemplate from "./components/FooterTemplate.vue";
 import HeaderTemplate from "./components/HeaderTemplate.vue";
+import NotificationsIndex from "./components/notifications/NotificationIndex.vue";
+
 export default {
   name: "App",
   components: {
     FooterTemplate,
     HeaderTemplate,
+    NotificationsIndex,
   },
 };
 </script>

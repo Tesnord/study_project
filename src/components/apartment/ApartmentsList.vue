@@ -11,11 +11,10 @@
 <script>
 import ContainerSection from '../shared/ContainerSection.vue'
 
-
 export default {
   name: 'ApartmentsList',
   components: {
-    ContainerSection
+    ContainerSection,
   },
   props: {
     items: {
