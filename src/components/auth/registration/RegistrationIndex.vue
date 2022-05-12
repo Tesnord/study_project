@@ -57,7 +57,6 @@ import {
   passwordValidation,
   isRequired,
 } from "../../../utils/validationRules";
-import { RegisterUser } from "../../../services/auth.service";
 
 export default {
   name: "RegistrationIndex",
@@ -114,8 +113,10 @@ export default {
       if (isFormValid) {
         try {
           this.loading = true;
-          const { data } = await RegisterUser({ name, password, email });
-          console.log(data);
+
+          await this.$store.dispatch("registration", { name, password, email });
+
+          this.$router.push({ name: "homepage" });
           form.reset();
         } catch (error) {
           this.$notify({
